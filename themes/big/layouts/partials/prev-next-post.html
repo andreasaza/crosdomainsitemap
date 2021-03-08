@@ -1,0 +1,26 @@
+<section class="content1 cid-scbO6ytHb4" id="content1-n">
+    <div class="container">
+        <div class="row mt-4">
+            {{with .PrevInSection}}<div class="item features-image сol-10 col-md-6 col-lg-6">
+                <div class="item-wrapper">
+                    <div class="item-img">
+                        <a href="{{ .Permalink }}"><img src='{{ if eq .Params.Image "" }}https://placeholder.pics/svg/320x160{{else}}{{ .Params.Image}}{{end}}' alt='{{ .Title | markdownify }}'></a>
+                    </div>
+                    <div class="item-content">
+                        <a href="{{ .Permalink }}"><h6 class="item-subtitle mbr-fonts-style mt-1 display-7">Previous Recipe<br/><strong>{{ .Params.Title }}</strong></h6></a>
+                    </div>
+                </div>
+            </div>{{end}}
+            {{with .NextInSection}}<div class="item features-image сol-10 col-md-6 col-lg-6">
+                <div class="item-wrapper">
+                    <div class="item-img">
+                        <a href="{{ .Permalink }}"><img src='{{ if eq .Params.Image "" }}https://placeholder.pics/svg/320x160{{else}}{{ .Params.Image}}{{end}}' alt='{{ .Title | markdownify }}'></a>
+                    </div>
+                    <div class="item-content">
+                        <a href="{{ .Permalink }}"><h6 class="item-subtitle mbr-fonts-style mt-1 display-7">Next Recipe<br/><strong>{{ .Params.Title }}</strong></h6></a>
+                    </div>
+                </div>
+            </div>{{end}}
+        </div>
+    </div>
+</section>
